@@ -1,6 +1,8 @@
 # VPS Deployment Guide (Docker)
 
-This project is configured for easy deployment on any VPS using Docker.
+This project is configured for easy deployment on any VPS using Docker. It consists of two services:
+1.  **Web App**: The Next.js frontend and API.
+2.  **Worker**: The OKX Adapter for realtime market data.
 
 ## Prerequisites
 
@@ -24,16 +26,18 @@ This project is configured for easy deployment on any VPS using Docker.
     ```env
     NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
     NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+    SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key (Optional, for better permission handling)
     ```
 
 3.  **Start the application**:
-    Run the following command to build and start the container in the background:
+    Run the following command to build and start the containers in the background:
     ```bash
     docker-compose up -d --build
     ```
 
 4.  **Verify**:
-    Your app should now be running on `http://YOUR_VPS_IP:3000`.
+    - Web App: `http://YOUR_VPS_IP:3000`
+    - Check Logs: `docker-compose logs -f`
 
 ## Updates
 
