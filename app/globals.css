@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --brand-cyan: #00E5FF;
+  --brand-purple: #7B61FF;
+  --brand-gradient: linear-gradient(135deg, #7B61FF 0%, #2D5BFF 100%);
+  
+  /* Functional Colors */
+  --success: #02C076;
+  --danger: #F84960;
+  --up: #02C076;
+  --down: #F84960;
+  --accent: #F0B90B;
+  
+  /* Backgrounds */
+  --background: #0B0E11;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  
+  /* Text */
+  --foreground: #EAECEF;
+  --text-secondary: #A1A1AA;
+  --text-muted: #52525B;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-purple: var(--brand-purple);
+  
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-accent: var(--accent);
+  
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+  
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  /* Custom Animations - Increased Range (approx 15-25vw/vh) */
+  --animate-wander-1: wander-1 20s infinite ease-in-out;
+  --animate-wander-2: wander-2 24s infinite ease-in-out;
+  --animate-wander-3: wander-3 28s infinite ease-in-out;
+  --animate-wander-4: wander-4 22s infinite ease-in-out;
+  --animate-wander-5: wander-5 26s infinite ease-in-out;
+  --animate-wander-6: wander-6 30s infinite ease-in-out;
+  --animate-ticker: ticker 40s linear infinite;
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.33%); }
+  }
+
+  @keyframes wander-1 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(25vw, -15vh); }
+    66% { transform: translate(-15vw, 20vh); }
+  }
+
+  @keyframes wander-2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-25vw, 25vh); }
+  }
+
+  @keyframes wander-3 {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(15vw, 15vh); }
+    50% { transform: translate(-20vw, -20vh); }
+    75% { transform: translate(10vw, -25vh); }
+  }
+  
+  @keyframes wander-4 {
+    0%, 100% { transform: translate(0, 0); }
+    40% { transform: translate(-20vw, -15vh); }
+    80% { transform: translate(20vw, 15vh); }
+  }
+
+  @keyframes wander-5 {
+    0%, 100% { transform: translate(0, 0); }
+    30% { transform: translate(15vw, 20vh); }
+    70% { transform: translate(-20vw, -15vh); }
+  }
+
+  @keyframes wander-6 {
+    0%, 100% { transform: translate(0, 0); }
+    20% { transform: translate(-10vw, 20vh); }
+    60% { transform: translate(15vw, -10vh); }
+    90% { transform: translate(-10vw, -10vh); }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

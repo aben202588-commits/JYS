@@ -1,0 +1,434 @@
+{
+  "text": {
+    "header.exchange": {
+      "zh": "交易",
+      "en": "Exchange"
+    },
+    "header.markets": {
+      "zh": "行情",
+      "en": "Markets"
+    },
+    "header.trade": {
+      "zh": "币币",
+      "en": "Trade"
+    },
+    "header.derivatives": {
+      "zh": "衍生品",
+      "en": "Derivatives"
+    },
+    "header.earn": {
+      "zh": "理财",
+      "en": "Earn"
+    },
+    "header.finance": {
+      "zh": "金融",
+      "en": "Finance"
+    },
+    "header.login": {
+      "zh": "登录",
+      "en": "Log In"
+    },
+    "header.signup": {
+      "zh": "注册",
+      "en": "Sign Up"
+    },
+    "hero.leading": {
+      "zh": "全球领先的数字资产交易平台",
+      "en": "The World's Leading Digital Asset Exchange"
+    },
+    "hero.title_line1": {
+      "zh": "实现财富",
+      "en": "ACHIEVE WEALTH"
+    },
+    "hero.title_line2": {
+      "zh": "自由",
+      "en": "FREEDOM"
+    },
+    "hero.subtitle": {
+      "zh": "全球领先的数字资产交易平台。您的资产，您的选择，由 MicroStrategy 成熟技术驱动。",
+      "en": "The world's leading digital asset exchange. Your assets, your choice, powered by MicroStrategy's proven technology."
+    },
+    "hero.cta": {
+      "zh": "立即注册",
+      "en": "Register"
+    },
+    "hero.sent": {
+      "zh": "已发送!",
+      "en": "Sent!"
+    },
+    "hero.placeholder": {
+      "zh": "邮箱 / 手机号码",
+      "en": "Email / Phone number"
+    },
+    "hero.stats_coins": {
+      "zh": "币种",
+      "en": "Coins"
+    },
+    "hero.stats_countries": {
+      "zh": "国家地区",
+      "en": "Countries"
+    },
+    "hero.stats_users": {
+      "zh": "注册用户",
+      "en": "Users"
+    },
+    "hero.mobile_vol": {
+      "zh": "24h 交易量",
+      "en": "24h Vol"
+    },
+    "hero.mobile_coins": {
+      "zh": "币种数量",
+      "en": "Coins"
+    },
+    "hero.mobile_users": {
+      "zh": "注册用户",
+      "en": "Users"
+    },
+    "hero.mobile_cta": {
+      "zh": "立即交易",
+      "en": "Trade Now"
+    },
+    "hero.quick_withdraw": {
+      "zh": "提币",
+      "en": "Withdraw"
+    },
+    "hero.quick_deposit": {
+      "zh": "充值",
+      "en": "Deposit"
+    },
+    "hero.quick_security": {
+      "zh": "安全中心",
+      "en": "Security"
+    },
+    "hero.quick_address": {
+      "zh": "地址簿",
+      "en": "Address"
+    },
+    "hero.quick_portfolio": {
+      "zh": "投资组合",
+      "en": "Portfolio"
+    },
+    "banners.bonus_title": {
+      "zh": "超级福利",
+      "en": "Super Bonus"
+    },
+    "banners.bonus_sub": {
+      "zh": "注册即送",
+      "en": "Register & Get"
+    },
+    "banners.listing_title": {
+      "zh": "新币上线",
+      "en": "New Listing"
+    },
+    "banners.listing_sub": {
+      "zh": "交易瓜分",
+      "en": "Trade & Share"
+    },
+    "banners.futures_title": {
+      "zh": "合约交易",
+      "en": "Futures Trading"
+    },
+    "banners.futures_sub": {
+      "zh": "赢取高达",
+      "en": "Win Up To"
+    },
+    "market.title": {
+      "zh": "您的 Web3 之旅由此开始",
+      "en": "Your Web3 journey begins here"
+    },
+    "market.search": {
+      "zh": "搜索币种名称",
+      "en": "Search Coin Name"
+    },
+    "market.headers.name": {
+      "zh": "名称",
+      "en": "Name"
+    },
+    "market.headers.price": {
+      "zh": "最新价",
+      "en": "Price"
+    },
+    "market.headers.change": {
+      "zh": "24h涨跌",
+      "en": "24h Change"
+    },
+    "market.headers.action": {
+      "zh": "操作",
+      "en": "Action"
+    },
+    "market.trade": {
+      "zh": "交易",
+      "en": "Trade"
+    },
+    "market.view_all": {
+      "zh": "查看所有行情 →",
+      "en": "View All Markets →"
+    },
+    "market.categories.all": {
+      "zh": "全部",
+      "en": "All"
+    },
+    "market.categories.defi": {
+      "zh": "DeFi",
+      "en": "DeFi"
+    },
+    "market.categories.metaverse": {
+      "zh": "元宇宙",
+      "en": "Metaverse"
+    },
+    "market.categories.gaming": {
+      "zh": "链游",
+      "en": "Gaming"
+    },
+    "market.categories.meme": {
+      "zh": "Meme",
+      "en": "Meme"
+    },
+    "trend.title": {
+      "zh": "趋势分析",
+      "en": "Trend analysis"
+    },
+    "trend.bitcoin": {
+      "zh": "比特币",
+      "en": "Bitcoin"
+    },
+    "trend.price": {
+      "zh": "价格",
+      "en": "Price"
+    },
+    "strategy.title": {
+      "zh": "AI 量化策略",
+      "en": "AI Quantitative Strategy"
+    },
+    "strategy.subtitle": {
+      "zh": "利用我们先进的算法交易策略最大化您的收益。基于5年市场数据回测。",
+      "en": "Maximize your profits with our advanced algorithmic trading strategies. Backtested on 5 years of market data."
+    },
+    "strategy.view_all": {
+      "zh": "查看所有策略",
+      "en": "View All Strategies"
+    },
+    "strategy.copy": {
+      "zh": "复制策略",
+      "en": "Copy Strategy"
+    },
+    "strategy.roi": {
+      "zh": "30日收益率",
+      "en": "30D ROI"
+    },
+    "strategy.items.spot": {
+      "zh": "现货网格",
+      "en": "Spot Grid"
+    },
+    "strategy.items.spot_desc": {
+      "zh": "低风险自动化交易",
+      "en": "Low-risk automated trading"
+    },
+    "strategy.items.futures": {
+      "zh": "合约网格",
+      "en": "Futures Grid"
+    },
+    "strategy.items.futures_desc": {
+      "zh": "捕捉波动收益",
+      "en": "Leveraged volatility capture"
+    },
+    "strategy.items.rebalance": {
+      "zh": "智能持仓",
+      "en": "Smart Rebalance"
+    },
+    "strategy.items.rebalance_desc": {
+      "zh": "动态投资组合调整",
+      "en": "Dynamic portfolio adjustment"
+    },
+    "stats.title_line1": {
+      "zh": "为每个人打造的",
+      "en": "A cryptocurrency exchange for"
+    },
+    "stats.title_line2": {
+      "zh": "加密货币交易所",
+      "en": "Everyone"
+    },
+    "stats.desc": {
+      "zh": "我们通过移动端和Web端为您提供安全、可靠、稳定的加密货币交易环境。我们使用最先进的技术为用户提供最好的服务。",
+      "en": "We provide a safe, reliable and stable environment for crypto trading via mobile and web apps. We use the most advanced technology to offer the best services to our users."
+    },
+    "stats.clients": {
+      "zh": "注册用户",
+      "en": "Clients"
+    },
+    "stats.countries": {
+      "zh": "覆盖国家",
+      "en": "Countries"
+    },
+    "stats.volume": {
+      "zh": "季度交易量",
+      "en": "Quarterly Volume"
+    },
+    "portfolio.title": {
+      "zh": "投资组合",
+      "en": "Investment Portfolio"
+    },
+    "portfolio.subtitle": {
+      "zh": "实时追踪、管理和增长您的资产。",
+      "en": "Track, manage and grow your assets in real-time."
+    },
+    "portfolio.view_all": {
+      "zh": "查看所有资产",
+      "en": "View All Assets"
+    },
+    "nft.new": {
+      "zh": "最新上架",
+      "en": "NEW ARRIVAL"
+    },
+    "nft.title_line1": {
+      "zh": "探索",
+      "en": "DISCOVER"
+    },
+    "nft.title_line2": {
+      "zh": "独家 NFT",
+      "en": "THE EXCLUSIVE NFT"
+    },
+    "nft.title_line3": {
+      "zh": "收藏系列",
+      "en": "COLLECTION"
+    },
+    "nft.explore": {
+      "zh": "立即探索",
+      "en": "Explore Now"
+    },
+    "nft.create": {
+      "zh": "创建 NFT",
+      "en": "Create NFT"
+    },
+    "footer.trust_title": {
+      "zh": "值得您信赖的合作伙伴",
+      "en": "A partner worthy of your trust"
+    },
+    "footer.trust_desc": {
+      "zh": "您的安全是我们的首要任务。我们设立了最高的安全标准。",
+      "en": "Your safety, our priority. We set the highest standards for security."
+    },
+    "footer.trust_1_title": {
+      "zh": "安全存储",
+      "en": "Secure Storage"
+    },
+    "footer.trust_1_desc": {
+      "zh": "绝大多数数字资产存储在安全的离线存储中。",
+      "en": "The vast majority of digital assets are stored in secure offline storage."
+    },
+    "footer.trust_2_title": {
+      "zh": "资产保护",
+      "en": "Protected Assets"
+    },
+    "footer.trust_2_desc": {
+      "zh": "您的账户受多重身份验证和银行级安全保护。",
+      "en": "Your account is protected by multi-factor authentication and bank-level security."
+    },
+    "footer.trust_3_title": {
+      "zh": "24/7 支持",
+      "en": "24/7 Support"
+    },
+    "footer.trust_3_desc": {
+      "zh": "遇到问题？随时联系我们。我们的支持团队全天候在线。",
+      "en": "Got a problem? Just get in touch. Our support team is available 24/7."
+    },
+    "footer.about": {
+      "zh": "关于我们",
+      "en": "About Us"
+    },
+    "footer.products": {
+      "zh": "产品服务",
+      "en": "Products"
+    },
+    "footer.support": {
+      "zh": "客户支持",
+      "en": "Support"
+    },
+    "footer.community": {
+      "zh": "社区",
+      "en": "Community"
+    },
+    "footer.links.about": {
+      "zh": "关于",
+      "en": "About"
+    },
+    "footer.links.careers": {
+      "zh": "加入我们",
+      "en": "Careers"
+    },
+    "footer.links.contacts": {
+      "zh": "商务联系",
+      "en": "Business Contacts"
+    },
+    "footer.links.community": {
+      "zh": "社区",
+      "en": "Community"
+    },
+    "footer.links.exchange": {
+      "zh": "交易",
+      "en": "Exchange"
+    },
+    "footer.links.academy": {
+      "zh": "学院",
+      "en": "Academy"
+    },
+    "footer.links.wallet": {
+      "zh": "钱包",
+      "en": "Wallet"
+    },
+    "footer.links.card": {
+      "zh": "卡片",
+      "en": "Card"
+    },
+    "footer.links.help": {
+      "zh": "帮助中心",
+      "en": "Help Center"
+    },
+    "footer.links.request": {
+      "zh": "提交工单",
+      "en": "Submit Request"
+    },
+    "footer.links.fees": {
+      "zh": "费率标准",
+      "en": "Fees"
+    },
+    "footer.links.security": {
+      "zh": "安全中心",
+      "en": "Security"
+    },
+    "footer.copyright": {
+      "zh": "© 2024 BitTrade. All rights reserved.",
+      "en": "© 2024 BitTrade. All rights reserved."
+    },
+    "nav.home": {
+      "zh": "首页",
+      "en": "Home"
+    },
+    "nav.markets": {
+      "zh": "行情",
+      "en": "Markets"
+    },
+    "nav.trade": {
+      "zh": "交易",
+      "en": "Trade"
+    },
+    "nav.earn": {
+      "zh": "理财",
+      "en": "Earn"
+    },
+    "nav.assets": {
+      "zh": "资产",
+      "en": "Assets"
+    }
+  },
+  "images": {
+    "hero_video": "",
+    "hero_bg": "/uploads/1770820384822-761034194-btc2x.png",
+    "hero_floating_1": "/uploads/1770820394331-356130332-eth2x.png",
+    "hero_floating_2": "/uploads/1770820403302-729748040-trx2x.png",
+    "hero_floating_3": "/uploads/1770820410515-243509958-usdt2x.png",
+    "hero_floating_4": "/uploads/1770820477419-38483987-eos2x.png",
+    "hero_floating_5": "/uploads/1770820539940-491945740-bix2x.png",
+    "hero_floating_6": "/uploads/1770820584128-631195273-74edb1865df74515a2f3175180beea9c.png"
+  }
+}

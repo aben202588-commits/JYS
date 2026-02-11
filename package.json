@@ -1,0 +1,42 @@
+{
+  "name": "temp_project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 6001 --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@iconify/react": "^6.0.2",
+    "@supabase/supabase-js": "^2.95.3",
+    "@types/ws": "^8.18.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.2.4",
+    "https-proxy-agent": "^7.0.6",
+    "lightweight-charts": "^5.1.0",
+    "lucide-react": "^0.563.0",
+    "next": "15.5.12",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "recharts": "^3.7.0",
+    "socket.io-client": "^4.8.3",
+    "tailwind-merge": "^3.4.0",
+    "ws": "^8.19.0",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.12",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

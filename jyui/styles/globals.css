@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --brand-cyan: #00E5FF;
+  --brand-purple: #7B61FF;
+  --brand-gradient: linear-gradient(135deg, #7B61FF 0%, #2D5BFF 100%);
+  
+  /* Functional Colors */
+  --success: #00C087;
+  --danger: #FF3B30;
+  
+  /* Backgrounds */
+  --background: #050505;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  
+  /* Text */
+  --foreground: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --text-muted: #52525B;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-purple: var(--brand-purple);
+  
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+  
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  /* Custom Animations */
+  --animate-wander-1: wander-1 10s infinite ease-in-out;
+  --animate-wander-2: wander-2 12s infinite ease-in-out;
+  --animate-wander-3: wander-3 14s infinite ease-in-out;
+  --animate-wander-4: wander-4 11s infinite ease-in-out;
+  --animate-wander-5: wander-5 13s infinite ease-in-out;
+  --animate-wander-6: wander-6 15s infinite ease-in-out;
+
+  @keyframes wander-1 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(30px, -30px); }
+    66% { transform: translate(-20px, 20px); }
+  }
+
+  @keyframes wander-2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-30px, 30px); }
+  }
+
+  @keyframes wander-3 {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(20px, 20px); }
+    50% { transform: translate(-20px, -20px); }
+    75% { transform: translate(10px, -30px); }
+  }
+  
+  @keyframes wander-4 {
+    0%, 100% { transform: translate(0, 0); }
+    40% { transform: translate(-25px, -15px); }
+    80% { transform: translate(25px, 15px); }
+  }
+
+  @keyframes wander-5 {
+    0%, 100% { transform: translate(0, 0); }
+    30% { transform: translate(15px, 25px); }
+    70% { transform: translate(-25px, -15px); }
+  }
+
+  @keyframes wander-6 {
+    0%, 100% { transform: translate(0, 0); }
+    20% { transform: translate(-10px, 20px); }
+    60% { transform: translate(20px, -10px); }
+    90% { transform: translate(-10px, -10px); }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

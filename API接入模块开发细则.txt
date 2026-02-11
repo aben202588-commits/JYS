@@ -1,0 +1,83 @@
+API项目模块化部署方案
+1. 核心文件夹结构
+在根目录下建立聚合服务层，确保每个品类独立运作：
+/server
+  /api-service
+    /adapters
+      module_forex.ts  // 对接 OANDA/Polygon 外汇接口
+      module_spot.ts   // 对接 OKX V5 现货接口
+      module_swap.ts   // 对接 OKX V5 合约接口
+      module_stock.ts  // 对接 Finnhub/Polygon 美股接口
+      module_option.ts // 二元期权逻辑处理器（基于上述价格计算）
+    MarketDataManager.ts // 聚合调度中心
+. Supabase 数据表设计 (SQL)
+为了支持数据本地化，您需要在 Supabase 执行以下建表逻辑：
+-- 实时行情快照表
+CREATE TABLE market_cache (
+    id TEXT PRIMARY KEY,          -- 唯一标识 (例如: SPOT:BTC-USDT)
+    module_type TEXT NOT NULL,    -- 模块名 (module_spot, module_forex 等)
+    symbol TEXT NOT NULL,         -- 资产代码
+    display_name TEXT,            -- 中文名称 (从 jyui 字典映射)
+    last_price DECIMAL,           -- 最新价格
+    change_24h DECIMAL,           -- 24小时涨跌幅
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 用户权限与VIP等级
+ALTER TABLE profiles ADD COLUMN vip_level INT DEFAULT 0; -- 0:访客, 1:VIP, 2:SVIP
+
+给 Trae 的最终部署提示词
+请将以下指令发送给 Trae，它将严格按照您的模块化定义进行开发：
+
+指令：全品类金融交易平台模块化重构
+
+1. 模块化适配器实现：
+
+请在 /server/api-service/adapters 目录下，按照以下命名规范创建五个独立的适配器文件：
+
+module_forex: 处理外汇实时数据。
+
+module_spot: 处理加密货币现货数据（对接 OKX V5）。
+
+module_swap: 处理加密货币合约数据。
+
+module_stock: 处理美股数据。
+
+module_option: 二元期权逻辑层，引用 module_spot 或 module_forex 的实时价格作为标的。
+
+2. Supabase 本地化存储 (Localization)：
+
+所有的适配器在收到数据后，必须第一时间将标准化的数据（symbol, price, change）更新到 Supabase 的 market_cache 表中。
+
+写入逻辑需包含翻译映射，确保前端读取到的 display_name 是正确的中文。
+
+3. 权限守卫与 UI 联动 (VIP Guard)：
+
+调用根目录 /jyui 中的组件。
+
+在 /trade/[module] 路由下应用权限拦截。
+
+拦截规则：若 user.vip_level < 1，则通过 jyui 的 backdrop-blur 样式遮盖交易面板，并弹出升级 VIP 的引导弹窗。
+
+4. 性能与限频优化：
+
+前端行情列表通过 Supabase Realtime 或你自建的 WebSocket 统一从 market_cache 获取数据，不再直接请求第三方 API。
+
+实现“按需订阅”逻辑：只有当用户进入特定模块（如 module_stock）时，才启动该适配器的实时数据监听，以节省流量和数据库压力。
+
+请先输出 MarketDataManager.ts 聚合调度器的代码逻辑。
+
+🛠️ 方案细节重点
+资产唯一性：建议 id 采用 module:symbol 格式，例如 module_spot:BTC-USDT，防止不同品类出现同名资产导致数据冲突。
+
+二元期权 (module_option)：由于它是后期开发重点，目前只需让 Trae 做出 UI 占位。它不需要独立的行情源，而是直接“监听” module_spot 或 module_forex 在数据库中更新的价格。
+
+流量隔离：如果某个模块（如美股）数据源收费较高，可以在 module_stock 中加入更严格的 VIP 校验，甚至在 API 层级直接拦截非会员的数据请求。
+
+
+品种名称	现货代码 (instId)	永续合约代码 (instId)
+比特币	BTC-USDT	BTC-USDT-SWAP
+以太坊	ETH-USDT	ETH-USDT-SWAP
+莱特币	LTC-USDT	LTC-USDT-SWAP
+波卡	DOT-USDT	DOT-USDT-SWAP
+索拉纳	SOL-USDT	SOL-USDT-SWAP
