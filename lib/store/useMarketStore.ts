@@ -21,11 +21,13 @@ interface MarketStore {
   unsubscribeRealtime: () => void;
 }
 
-// Initialize Supabase client
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+// Initialize Supabase client safely
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = (supabaseUrl && supabaseKey) 
+  ? createClient(supabaseUrl, supabaseKey) 
+  : null;
 
 export const useMarketStore = create<MarketStore>((set, get) => ({
   markets: {},
@@ -107,7 +109,9 @@ export const useMarketStore = create<MarketStore>((set, get) => ({
       });
   },
   unsubscribeRealtime: () => {
-    supabase.removeAllChannels();
+    if (supabase) {
+      supabase.removeAllChannels();
+    }
     set({ isSubscribed: false });
   }
 }));
