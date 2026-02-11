@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export const runtime = 'edge';
+// export const runtime = 'edge'; // Removed for VPS/Node.js deployment
 
 // NOTE: Local file system operations (fs) are not supported in Cloudflare Pages (Edge Runtime).
 // This route needs to be refactored to use Supabase Storage or R2.

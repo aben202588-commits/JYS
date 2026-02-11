@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
 
-export const runtime = 'edge';
+// export const runtime = 'edge'; // Removed for VPS/Node.js deployment
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 
 // NOTE: Local file system operations (fs) are not supported in Cloudflare Pages (Edge Runtime).
 // This route needs to be refactored to use a database (e.g., Supabase) or KV storage for content management.

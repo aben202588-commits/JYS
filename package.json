@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npm run build:next && npx @cloudflare/next-on-pages",
-    "build:next": "next build",
+    "build": "next build",
     "start": "next start",
     "pages:build": "npx @cloudflare/next-on-pages",
     "lint": "eslint"

@@ -1,9 +1,18 @@
-version: '3'
+version: '3.8'
+
 services:
-  web:
-    build: .
+  app:
+    container_name: jys-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
     ports:
       - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Add your actual environment variables here or use an .env file
+      - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
     env_file:
       - .env
-    restart: always
